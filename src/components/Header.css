@@ -1,0 +1,118 @@
+/* src/components/Header.css */
+
+/* General styles for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(20, 20, 30, 0.9); /* Semi-transparent dark background */
+  backdrop-filter: blur(10px); /* Blur effect for a futuristic look */
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo styles */
+.logo .logo-link {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.logo .logo-link:hover {
+  color: #ff6f61; /* Honkai Impact's signature pink-red */
+  text-shadow: 0 0 20px rgba(255, 111, 97, 0.8);
+}
+
+/* Nav links styles */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links .nav-link {
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.nav-links .nav-link:hover {
+  color: #ff6f61; /* Honkai Impact's signature pink-red */
+}
+
+/* Add a subtle anime-style underline effect */
+.nav-links .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff6f61;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Add a glowing effect on hover */
+.nav-links .nav-link:hover {
+  text-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+}
+
+/* Add a subtle background animation */
+@keyframes backgroundGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 111, 97, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.2);
+  }
+}
+
+.navbar {
+  animation: backgroundGlow 5s ease-in-out infinite;
+}
+
+/* Add a subtle floating effect */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo .logo-link:hover,
+.nav-links .nav-link:hover {
+  animation: float 2s ease-in-out infinite;
+}

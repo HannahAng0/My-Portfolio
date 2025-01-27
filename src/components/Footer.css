@@ -1,0 +1,81 @@
+/* General styles for the footer */
+.footer {
+  background: rgba(20, 20, 30, 0.9); /* Semi-transparent dark background */
+  backdrop-filter: blur(10px); /* Blur effect for a futuristic look */
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer content container */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Social links styles */
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links .social-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-links .social-link:hover {
+  color: #ff6f61; /* Honkai Impact's signature pink-red */
+  text-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+}
+
+.social-links .social-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff6f61;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.social-links .social-link:hover::after {
+  width: 100%;
+}
+
+/* Rights reserved text */
+.rights-reserved {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+}
+
+/* Subtle glowing background animation */
+@keyframes backgroundGlow {
+  0% {
+    background-color: rgba(20, 20, 30, 0.8);
+  }
+  50% {
+    background-color: rgba(30, 30, 40, 0.9);
+  }
+  100% {
+    background-color: rgba(20, 20, 30, 0.8);
+  }
+}
+
+.footer {
+  animation: backgroundGlow 5s ease-in-out infinite;
+}

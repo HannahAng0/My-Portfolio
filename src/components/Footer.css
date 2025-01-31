@@ -1,81 +1,80 @@
-/* General styles for the footer */
+/* Footer Background */
 .footer {
-  background: rgba(20, 20, 30, 0.9); /* Semi-transparent dark background */
-  backdrop-filter: blur(10px); /* Blur effect for a futuristic look */
+  background: rgba(255, 182, 193, 0.9);
+  backdrop-filter: blur(10px);
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
-  padding: 20px 40px;
+  padding: 40px 20px;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 105, 180, 0.3);
   position: relative;
   z-index: 1;
 }
 
-/* Footer content container */
+/* Centering Footer Content */
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-}
-
-/* Social links styles */
-.social-links {
-  display: flex;
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.social-links .social-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 5px 10px;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
-  position: relative;
+/* Social Media Card */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: rgba(238, 238, 238, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
-.social-links .social-link:hover {
-  color: #ff6f61; /* Honkai Impact's signature pink-red */
-  text-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+/* Social Media Icons */
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-.social-links .social-link::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #ff6f61;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  transition: width 0.3s ease;
+.socialContainer:hover {
+  transform: scale(1.2);
 }
 
-.social-links .social-link:hover::after {
-  width: 100%;
+/* Different Colors for Each Social Media */
+.containerOne:hover {
+  background-color: #c13584; /* Instagram */
 }
 
-/* Rights reserved text */
+.containerTwo:hover {
+  background-color: #1DA1F2; /* Twitter */
+}
+
+.containerThree:hover {
+  background-color: #0072b1; /* LinkedIn */
+}
+
+.containerFour:hover {
+  background-color: #25D366; /* WhatsApp */
+}
+
+/* SVG Icons */
+.socialSvg {
+  width: 22px;
+  fill: white;
+}
+
+/* Rights Reserved */
 .rights-reserved {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
-  margin-top: 10px;
-}
-
-/* Subtle glowing background animation */
-@keyframes backgroundGlow {
-  0% {
-    background-color: rgba(20, 20, 30, 0.8);
-  }
-  50% {
-    background-color: rgba(30, 30, 40, 0.9);
-  }
-  100% {
-    background-color: rgba(20, 20, 30, 0.8);
-  }
-}
-
-.footer {
-  animation: backgroundGlow 5s ease-in-out infinite;
+  margin-top: 20px;
 }

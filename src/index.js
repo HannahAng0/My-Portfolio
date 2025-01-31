@@ -6,7 +6,7 @@ import App from './App';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
-import './App.css';
+import './index.css';
 
 // Create a root element
 const root = ReactDOM.createRoot(document.getElementById('root'));

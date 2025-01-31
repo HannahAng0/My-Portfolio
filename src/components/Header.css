@@ -1,16 +1,14 @@
-/* src/components/Header.css */
-
 /* General styles for the navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: rgba(20, 20, 30, 0.9); /* Semi-transparent dark background */
-  backdrop-filter: blur(10px); /* Blur effect for a futuristic look */
+  background: rgba(255, 182, 193, 0.9) !important; /* Light pink with slight transparency */
+  backdrop-filter: blur(10px); /* Soft blur for a dreamy look */
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 105, 180, 0.3); /* Light pink border */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -20,16 +18,16 @@
 .logo .logo-link {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffffff; /* White text */
   text-decoration: none;
   transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
 }
 
 .logo .logo-link:hover {
-  color: #ff6f61; /* Honkai Impact's signature pink-red */
-  text-shadow: 0 0 20px rgba(255, 111, 97, 0.8);
+  color: #ff69b4; /* Lighter pink */
+  text-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
 }
 
 /* Nav links styles */
@@ -57,16 +55,16 @@
 }
 
 .nav-links .nav-link:hover {
-  color: #ff6f61; /* Honkai Impact's signature pink-red */
+  color: #ff1493; /* Deep pink */
 }
 
-/* Add a subtle anime-style underline effect */
+/* Add a soft glowing pink underline effect */
 .nav-links .nav-link::after {
   content: '';
   display: block;
   width: 0;
   height: 2px;
-  background: #ff6f61;
+  background: #ff69b4;
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -77,21 +75,21 @@
   width: 100%;
 }
 
-/* Add a glowing effect on hover */
+/* Glowing effect on hover */
 .nav-links .nav-link:hover {
-  text-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
 }
 
-/* Add a subtle background animation */
+/* Soft glowing background animation */
 @keyframes backgroundGlow {
   0% {
-    box-shadow: 0 0 10px rgba(255, 111, 97, 0.2);
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.2);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 111, 97, 0.4);
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
   }
   100% {
-    box-shadow: 0 0 10px rgba(255, 111, 97, 0.2);
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.2);
   }
 }
 
@@ -99,7 +97,7 @@
   animation: backgroundGlow 5s ease-in-out infinite;
 }
 
-/* Add a subtle floating effect */
+/* Floating effect */
 @keyframes float {
   0% {
     transform: translateY(0);

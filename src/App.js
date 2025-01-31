@@ -72,7 +72,7 @@ function App() {
       {/* Fun Fact Section */}
       <section className="fun-fact">
         <h2>Did You Know?</h2>
-        <p>I love coding while listening to lo-fi music! 🎶 It helps me stay focused and creative.</p>
+        <p>I love coding while listening to phonk music! 🎶 It helps me stay focused and creative.</p>
       </section>
 
       {/* Footer */}

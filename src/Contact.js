@@ -17,7 +17,6 @@ const Contact = () => {
 
         {/* Social Media Section */}
         <section className="socials">
-          <h2>Connect with Me!!</h2>
           <div className="social-links">
             <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i> Twitter

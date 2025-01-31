@@ -11,8 +11,8 @@ const Projects = () => {
       id: 1,
       title: 'Flutterflow Project: Catstagram',
       description: 'A social media app for cat lovers built with Flutter and Firebase.',
-      image: 'https://via.placeholder.com/300',
-      link: '#',
+      image: '/images/catstagram.png',
+      link: 'https://github.com/HannahAng0/Catstagram-Project',
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Projects = () => {
       id: 3,
       title: '(Future) Flutterflow: Recipe App',
       description: 'A recipe app built with Flutter and Firebase.',
-      image: 'https://via.placeholder.com/300',
+      image: '/images/catstagram.png',
       link: '#',
     },
   ];
@@ -50,7 +50,6 @@ const Projects = () => {
                   src={project.video}
                   controls
                   className="project-video"
-                  poster="https://via.placeholder.com/300" // Optional poster image
                 >
                   Your browser does not support the video tag.
                 </video>
@@ -60,7 +59,9 @@ const Projects = () => {
               <h2>{project.title}</h2>
               <p>{project.description}</p>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                View Project
+                <button className="custom-button">
+                  <span className="button_top">View Project</span>
+                </button>
               </a>
             </div>
           ))}

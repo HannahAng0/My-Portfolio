@@ -23,7 +23,7 @@ html, body {
   z-index: 1;
   text-align: center;
   padding: 150px 20px;
-  background: rgba(0, 0, 0, 0.25); /* Semi-transparent overlay */
+  background: rgb(0, 0, 0, 0.5); /* Semi-transparent overlay */
 }
 
 .hero h1 {
@@ -53,47 +53,65 @@ html, body {
   background: #e94560;
   box-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
 }
+/* === Removing default button style === */
+button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: rgb(133, 61, 72);
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+/* === Button Top Styling === */
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+/* === Hover Effect: Pull the button upwards === */
+button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+/* === Active Effect: Push the button downwards when pressed === */
+button:active .button_top {
+  transform: translateY(0);
+}
+
+/* === CTA Section Styling === */
 .cta-section {
-  padding: 50px 20px;
-  background: rgba(255, 182, 193, 0.8); /* Light pink with transparency */
   text-align: center;
-  color: #ffffff;
-}
-
-.cta-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.cta-section p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  padding: 2rem;
+  background: rgba(223, 163, 172);
 }
 
 .cta-buttons {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .cta-button {
-  padding: 10px 20px;
-  background: #ff1493; /* Deep pink */
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
+  display: inline-block;
   text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-  background: #ff69b4; /* Lighter pink */
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
-}
 .testimonials {
   padding: 50px 20px;
-  background: rgba(255, 105, 180, 0.8); /* Hot pink with transparency */
+  background: rgba(223, 163, 172); /* Hot pink with transparency */
   text-align: center;
   color: #ffffff;
 }
@@ -130,7 +148,7 @@ html, body {
 }
 .skills-tools {
   padding: 50px 20px;
-  background: rgba(255, 182, 193, 0.8); /* Light pink with transparency */
+  background: rgba(223, 163, 172); /* Light pink with transparency */
   text-align: center;
   color: #ffffff;
 }
@@ -138,6 +156,7 @@ html, body {
 .skills-tools h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .skills-grid {
@@ -146,18 +165,66 @@ html, body {
   gap: 20px;
   max-width: 800px;
   margin: 0 auto;
+  animation: fadeInUp 1.2s ease-out; /* Animation for the grid */
 }
 
 .skill-item {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  border-radius: 10px;
-  font-size: 1.1rem;
+  border-radius: 15px; /* Rounded corners */
+  font-size: 1.2rem;
   text-align: center;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+.skill-item:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly change background on hover */
+}
+
+/* Adding animation for the appearance of each skill item */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for individual skills */
+.skill-item:nth-child(1) {
+  animation: fadeInUp 0.5s ease-out 0.2s forwards;
+}
+
+.skill-item:nth-child(2) {
+  animation: fadeInUp 0.5s ease-out 0.4s forwards;
+}
+
+.skill-item:nth-child(3) {
+  animation: fadeInUp 0.5s ease-out 0.6s forwards;
+}
+
+.skill-item:nth-child(4) {
+  animation: fadeInUp 0.5s ease-out 0.8s forwards;
+}
+
+.skill-item:nth-child(5) {
+  animation: fadeInUp 0.5s ease-out 1s forwards;
+}
+
+.skill-item:nth-child(6) {
+  animation: fadeInUp 0.5s ease-out 1.2s forwards;
+}
+
 .fun-fact {
   padding: 50px 20px;
-  background: rgba(255, 105, 180, 0.8); /* Hot pink with transparency */
+  background: rgba(223, 163, 172); /* Hot pink with transparency */
   text-align: center;
   color: #ffffff;
 }

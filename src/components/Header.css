@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: rgba(255, 182, 193, 0.9) !important; /* Light pink with slight transparency */
+  background: rgba(255, 182, 193, 0.5) !important; /* Light pink with slight transparency */
   backdrop-filter: blur(10px); /* Soft blur for a dreamy look */
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
